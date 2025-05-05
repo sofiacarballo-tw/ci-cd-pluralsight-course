@@ -24,3 +24,7 @@ jobs:
       - id: build
         name: Build
         run: dotnet build --no-restore
+        
+      - id: test
+        name: Test
+        run: dotnet test --no-build --verbosity normal
