@@ -2,8 +2,5 @@
 
 public class Calculator
 {
-    public int Add(int firstInput, int secondInput)
-    {
-        throw new NotImplementedException();
-    }
+    public int Add(int firstInput, int secondInput) => firstInput + secondInput;
 }
