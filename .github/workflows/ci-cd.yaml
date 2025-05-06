@@ -28,3 +28,16 @@ jobs:
       - id: test
         name: Test
         run: dotnet test --no-build --verbosity normal
+  
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        run: |
+          DEPLOYMENT_KEY="${{ secrets.TEST_DEPLOYMENT_KEY }}"
+          echo "Simulating deployment with key: $DEPLOYMENT_KEY"
+          echo "Deployment simulation successful!"
+        
