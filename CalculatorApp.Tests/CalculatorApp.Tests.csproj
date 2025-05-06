@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ci-cd-pluralsight-course\ci-cd-pluralsight-course.csproj" />
+      <ProjectReference Include="..\CalculatorApp\CalculatorApp.csproj" />
     </ItemGroup>
 
 </Project>
